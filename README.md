@@ -9,7 +9,7 @@ The script doesn't have any dependency.
 
 ## Compatibility
 
-Tested on Safari 9, Chrome 48, and Firefox 43 on mac.
+Tested on Safari 9, Chrome 48, and Firefox 43 on Mac, Safari and Chrome on iOS 9, Chrome on Android Marshmallow.
 
 ## How to use
 
