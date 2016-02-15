@@ -1,7 +1,7 @@
 # Text Rotator
 
 Text Rotator is a simple script that loops through an array of words, replacing them on
-the DOM using a crazy random effect.
+the DOM using a crazy effect.
 
 ## Requirements
 
@@ -15,7 +15,6 @@ Tested on Safari 9, Chrome 48, and Firefox 43 on mac.
 
 1. Include the script;
 2. Initialize it when needed:
-
 
 		var el = document.querySelector('#element');
 		var words = [ "loop", "through", "these", "words" ];
@@ -35,12 +34,12 @@ Stops the animation and removes all the listeners and timeouts set.
 
 	new Rotator( el, words, speed, wait, alphabet, loop );
 
-* el - DOMObject:Required - The HTML DOM Object that will contain the texts
-* words - Array:Required - The Array of strings you want to loop through
-* speed - Int:Optional (Default: 20) - The speed in milliseconds of the animation on each single letter
-* wait - Int:Optional (Default: 1500) - Once finished writing a word, how much time should the script wait before start to write the following one?
-* alphabet - Array:Optional (Defaults to an array containing  *LOWER CASE* latin letters) - An Array of characters
-* loop - Bool:Optional (Default: true) - hould the script run forever or just once?
+* ```el``` - ```DOMObject```:Required - The HTML DOM Object that will contain the texts
+* ```words``` - ```Array```:Required - The Array of strings you want to loop through
+* ```speed``` - ```Int```:Optional (Default: 20) - The speed in milliseconds of the animation on each single letter
+* ```wait``` - ```Int```:Optional (Default: 1500) - Once finished writing a word, how much time should the script wait before start to write the following one?
+* ```alphabet``` - ```Array```:Optional (Defaults to an array containing  *LOWER CASE* latin letters) - An Array of characters
+* ```loop``` - ```Bool```:Optional (Default: true) - Should the script run forever or just once?
 
 ## Working example
 
