@@ -9,7 +9,12 @@ The script doesn't have any dependency.
 
 ## Compatibility
 
-Tested on Safari 9, Chrome 48, and Firefox 43 on Mac, Safari and Chrome on iOS 9, Chrome on Android Marshmallow.
+Tested on:
+- __Windows 10__: Edge, IE11, Firefox, Chrome;
+- __Mac__: Safari 9, Chrome 48, and Firefox 43;
+- __iOS__: Safari and Chrome on iOS 9;
+- __Android Marshmallow__: Chrome;
+- __Windows 10 Mobile__: Edge.
 
 ## How to use
 
