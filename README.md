@@ -43,9 +43,16 @@ Stops the animation and removes all the listeners and timeouts set.
 * ```words``` - ```Array```:Required - The Array of strings you want to loop through
 * ```speed``` - ```Int```:Optional (Default: 20) - The speed in milliseconds of the animation on each single letter
 * ```wait``` - ```Int```:Optional (Default: 1500) - Once finished writing a word, how much time should the script wait before start to write the following one?
-* ```alphabet``` - ```Array```:Optional (Defaults to an array containing  *LOWER CASE* latin letters) - An Array of characters
+* ```alphabet``` - ```Array```:Optional (Defaults to an array containing the letters in ```words```) - An Array of characters
 * ```loop``` - ```Bool```:Optional (Default: true) - Should the script run forever or just once?
 
 ## Working example
 
 You can see the script running here: https://simonelippolis.com/rotator
+
+## Revisions
+
+#### 2016-02-24 Changed alphabet defaults
+Now the alphabet is automatically generated using the content of the ```words``` array.
+
+#### 2016-02 First commit

@@ -15,16 +15,34 @@
 var Rotator = function( el, words, speed, wait, alphabet, loop ) {
 	var self = {
 		// Private properties and methods
-		"_alphabet": function() {
-			if ( alphabet !== null && alphabet !== undefined && Array.isArray(alphabet) ) {
-				return alphabet;
-			} else {
-				return [ " ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "à", "á", "ä", "â", "è", "é", "ë", "ê", "ì", "í", "ï", "î", "ò", "ó", "ö", "ô", "ù", "ú", "ü", "û"];
-			}
-		}(),
+		"_alphabet": [],
 		"_counter": -1,
+		"_createAlphabet": function( alphabet ) {
+			if ( alphabet !== null && alphabet !== undefined && Array.isArray(alphabet) ) {
+				return  alphabet;
+			} else {
+				var alphabet = [];
+				for (var i=0, l=words.length; i<l; i++) {
+					for (var j=0, m=words[i].length; j<m; j++) {
+						alphabet.push( words[i][j] );
+					}
+				}
+				return self._getUnique( alphabet );
+			}
+		},
 		"_currentLetterIndex": 0,
 		"_currentWordIndex": -1, 
+		"_getUnique": function(arr){
+			var u = {}, a = [];
+			for(var i = 0, l = arr.length; i < l; ++i) {
+				if(u.hasOwnProperty(arr[i])) {
+					continue;
+				}
+				a.push(arr[i]);
+				u[arr[i]] = 1;
+			}
+			return a;
+		},
 		"_el": el,
 		"_findLetter": function() {
 			self._counter++;
@@ -61,6 +79,10 @@ var Rotator = function( el, words, speed, wait, alphabet, loop ) {
 					}
 			    },
 			    self._speed);
+		},
+		"_init": function() {
+			self._alphabet = self._createAlphabet( alphabet );
+			return { "start": self.start, "stop": self.stop };
 		},
 		"_loop": function() {
 			clearTimeout(self._timeout);
@@ -118,5 +140,5 @@ var Rotator = function( el, words, speed, wait, alphabet, loop ) {
 			clearTimeout(self._timeout);
 		}
 	};
-	return { "start": self.start, "stop": self.stop };
+	return self._init();
 };
