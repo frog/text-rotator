@@ -46,9 +46,6 @@ Stops the animation and removes all the listeners and timeouts set.
 * ```alphabet``` - ```Array```:Optional (Defaults to an array containing the letters in ```words```) - An Array of characters
 * ```loop``` - ```Bool```:Optional (Default: true) - Should the script run forever or just once?
 
-## Working example
-
-You can see the script running here: https://simonelippolis.com/rotator
 
 ## Revisions
 
